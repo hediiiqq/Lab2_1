@@ -1,0 +1,30 @@
+@page
+@model Lab2_1.Pages.Contact
+
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<h2>Контакты</h2>
+<p><b>Электронная почта:</b> <a href="mailto:@Model.Email">@Model.Email</a></p>
+<p><b>Телефон:</b> @Model.Phone</p>
+<p><b>Telegram:</b> <a href="@Model.TelegramLink" target="_blank">Мой телеграм</a></p>
+<hr />
+
+<h2>Форма отбратной связи</h2>
+<h3>@Model.Message</h3>
+<form method="post">
+    <p>
+        <label>Ваше имя:</label><br/>
+        <input type="text" asp-for="PostName"/>
+    </p>
+    <p>
+        <label>Ваше телефон:</label><br/>
+        <input type="text" asp-for="PostPhone"/>
+    </p>
+    <p>
+        <label>Ваше сообщение:</label><br/>
+        <textarea rows ="6" cols="50" placeholder="Введите ваше сообщение здесь" asp-for="PostMessage"></textarea>
+    </p>
+    <button type="submit">Отправить</button>
+</form>

@@ -1,0 +1,19 @@
+﻿@page
+@model Lab2_1.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Домашняя страница</h1>
+    <p>Это сайт-визитка, созданный в рамках лабораторной работы по Razor Pages</p>
+</div>
+
+<div>
+    <h3>Информация обо мне</h3>
+    <p><b>ФИО:</b> @Model.FullName</p>
+    <p><b>Моя будущая профессия:</b> @Model.FutureJob</p>
+    <p><b>Мой ВУЗ:</b> @Model.University</p>
+    <p><b>Моя группа:</b> @Model.Group</p>
+    <p><b>Немного обо мне:</b> @Model.ShortDescription</p>
+</div>

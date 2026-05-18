@@ -1,0 +1,35 @@
+@page
+@model Lab2_1.Pages.AboutModel
+
+@{
+    ViewData["Title"] = "About Me";
+}
+<h2>Обо мне</h2>
+
+<p><b>ВУЗ:</b> @Model.University</p>
+<p><b>Группа:</b> @Model.Group</p>
+<p><b>Направление:</b> @Model.Direction</p>
+
+<h3>Мои увлечения</h3>
+<ul>
+    @foreach (var hobby in Model.Hobbies)
+    {
+        <li>@hobby</li>
+    }
+</ul>
+
+<h3>Мои любимые жанры музыки</h3>
+<ol>
+    @foreach (var genre in Model.FavoriteMusicGenres)
+    {
+        <li>@genre</li>
+    }
+</ol>
+
+<h3>Мои достижения в обучении</h3>
+<ul>
+    @foreach (var achievement in Model.Achievements)
+    {
+        <li>@achievement</li>
+    }
+</ul>
